@@ -1,13 +1,13 @@
 import altair as alt
 import streamlit as st
 import vega_datasets
-
+import pandas as pd
 
 
 @st.cache_data
 def load_data():
-    return vega_datasets.data.disaster()
-
+    github_csv_url = 'https://github.com/vega/vega-datasets/blob/main/data/disasters.csv'
+    return pd.read_csv(github_csv_url)
 
 disasters = load_data()
 
