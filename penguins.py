@@ -6,13 +6,13 @@ import vega_datasets
 
 @st.cache_data
 def load_data():
-    return vega_datasets.data.penguins()
+    return vega_datasets.data.football()
 
 
-penguins = load_data()
+football = load_data()
 
-st.header("Penguins")
+st.header("football")
 
 if st.checkbox("Show raw data"):
-    st.write(vega_datasets.data.penguins.url)
-    st.write(penguins)
+    st.write(vega_datasets.data.football.url)
+    st.write(football)
