@@ -19,7 +19,7 @@ if st.checkbox("Show raw data"):
 
 mpg = alt.Chart(disasters).mark_line(point=True).encode(
     alt.X('Year'),
-    alt.Y('entity')
+    alt.Y('Entity')
 )
 
 st.altair_chart(mpg)
