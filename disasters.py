@@ -13,9 +13,7 @@ disasters = load_data()
 
 st.header("Disasters")
 
-if st.checkbox("Show raw data"):
-    st.write(vega_datasets.data.disasters.url)
-    st.write(disasters)
+
 
 mpg = alt.Chart(disasters).mark_line(point=True).encode(
     alt.X('Year'),
