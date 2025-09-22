@@ -1,19 +1,15 @@
 import altair as alt
 import streamlit as st
-import vega_datasets
 import pandas as pd
 
 
 @st.cache_data
 def load_data():
-    github_csv_url = 'https://github.com/vega/vega-datasets/blob/main/data/disasters.csv'
-    return pd.read_csv(github_csv_url)
+    return pd.read_csv('https://github.com/vega/vega-datasets/blob/main/data/disasters.csv')
 
 disasters = load_data()
 
 st.header("Disasters")
-
-
 
 mpg = alt.Chart(disasters).mark_line(point=True).encode(
     alt.X('Year'),
